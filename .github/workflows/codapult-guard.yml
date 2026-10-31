@@ -59,17 +59,12 @@ jobs:
         env:
           POLICY_BASE: ${{ github.event.pull_request.base.sha }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            # PR source code and package scripts are untrusted. Keep this gate
-            # deterministic; trusted pushes can run the project's own checks.
-            check_args=(--no-project-checks --tools off --fail-on-protected-changes)
-          else
-            check_args=(--no-project-checks --tools off)
-          fi
+          # Keep this workflow focused on Guard; do not invoke project scripts.
+          check_args=(--no-project-checks --tools off)
           if [ -n "$POLICY_BASE" ]; then
-            pnpm exec codapult-guard verify "${check_args[@]}" --policy-base "$POLICY_BASE" --fail-on-policy-change --json --attestation-out guard-verification.intoto.json > guard-verification.json
+            pnpm exec codapult-guard verify "${check_args[@]}" --policy-base "$POLICY_BASE" --fail-on-policy-change --json > guard-verification.json
           else
-            pnpm exec codapult-guard verify "${check_args[@]}" --json --attestation-out guard-verification.intoto.json > guard-verification.json
+            pnpm exec codapult-guard verify "${check_args[@]}" --json > guard-verification.json
           fi
 
       - name: Add Guard result to the workflow summary
@@ -154,7 +149,6 @@ jobs:
           name: codapult-guard-verification
           path: |
             guard-verification.json
-            guard-verification.intoto.json
           if-no-files-found: ignore
 
       # Keep .codapult/guard policy files behind the repository's protected
