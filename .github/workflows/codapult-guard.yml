@@ -60,9 +60,9 @@ jobs:
           POLICY_BASE: ${{ github.event.pull_request.base.sha }}
         run: |
           # Keep this workflow focused on Guard; do not invoke project scripts.
-          check_args=(--no-project-checks --tools off --fail-on-protected-changes)
+          check_args=(--no-project-checks --tools off)
           if [ -n "$POLICY_BASE" ]; then
-            pnpm exec codapult-guard verify "${check_args[@]}" --policy-base "$POLICY_BASE" --fail-on-policy-change --attestation-out guard-verification.intoto.json --json > guard-verification.json
+            pnpm exec codapult-guard verify "${check_args[@]}" --policy-base "$POLICY_BASE" --fail-on-policy-change --fail-on-protected-changes --attestation-out guard-verification.intoto.json --json > guard-verification.json
           else
             pnpm exec codapult-guard verify "${check_args[@]}" --attestation-out guard-verification.intoto.json --json > guard-verification.json
           fi

@@ -1852,7 +1852,7 @@
     {
       "path": "pnpm-workspace.yaml",
       "kind": "other",
-      "bytes": 1526
+      "bytes": 1555
     },
     {
       "path": "scripts/e2e/__snapshots__/pack.test.ts.snap",
@@ -9869,21 +9869,18 @@
     "branch": "codapult-guard/setup",
     "dirty": true,
     "changedFiles": [
-      ".codapult/guard/cache.json",
-      ".codapult/guard/history/runs/guard-353d868b-2345-4bd6-8cb1-d7935f120c37.json",
-      ".github/workflows/codapult-guard.yml",
-      "package.json",
-      "pnpm-lock.yaml"
+      "pnpm-workspace.yaml"
     ],
     "status": [
-      "M .github/workflows/codapult-guard.yml",
-      " M package.json",
-      " M pnpm-lock.yaml",
-      "?? .codapult/guard/cache.json",
-      "?? .codapult/guard/history/"
+      "M pnpm-workspace.yaml"
     ],
-    "diffStat": ".github/workflows/codapult-guard.yml |  7 ++++---\n package.json                         |  2 +-\n pnpm-lock.yaml                       | 14 +++++++-------\n 3 files changed, 12 insertions(+), 11 deletions(-)",
+    "diffStat": "pnpm-workspace.yaml | 1 +\n 1 file changed, 1 insertion(+)",
     "history": [
+      {
+        "hash": "3c0684b44c86bc695016427a7733d30c0045fe80",
+        "date": "2026-10-31T15:32:19+05:00",
+        "subject": "test: verify Guard 0.11.0 integration"
+      },
       {
         "hash": "780dcda55df2d84553abeef668fc0d8025853a3a",
         "date": "2026-10-31T15:28:41+05:00",
@@ -10028,11 +10025,6 @@
         "hash": "2eb65ba75368976251fcb36897634272e890707e",
         "date": "2026-08-24T22:11:54Z",
         "subject": "Add script to run unit and e2e tests separately (#2267)"
-      },
-      {
-        "hash": "9aa6b67ac653680a73d2d7a078ceaf28c3975129",
-        "date": "2026-08-24T18:35:47Z",
-        "subject": "docs: mention `github-token` in migration (#2268)"
       }
     ]
   },
