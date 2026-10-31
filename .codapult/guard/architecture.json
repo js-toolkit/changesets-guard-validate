@@ -525,6 +525,7 @@
       "packages": [],
       "files": [
         ".github/workflows/ci.yml",
+        ".github/workflows/codapult-guard.yml",
         ".github/workflows/pkg-pr-new.yml",
         ".github/workflows/publish.yml"
       ],
@@ -786,6 +787,7 @@
       ],
       "files": [
         ".github/workflows/ci.yml",
+        ".github/workflows/codapult-guard.yml",
         ".github/workflows/pkg-pr-new.yml",
         ".github/workflows/publish.yml",
         "packages/config/scripts/generate-json-schema.ts",
@@ -963,12 +965,12 @@
       {
         "from": "other",
         "to": "other",
-        "count": 92
+        "count": 107
       },
       {
         "from": "tests",
         "to": "other",
-        "count": 58
+        "count": 68
       },
       {
         "from": "tests",
@@ -1222,6 +1224,10 @@
       },
       {
         "from": "packages/cli/src/cli.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
         "to": "packages/errors/src/index.ts"
       },
       {
@@ -1237,12 +1243,20 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/add/createChangeset.ts",
         "to": "packages/cli/src/utils/askWithEditor.ts"
       },
       {
         "from": "packages/cli/src/commands/add/createChangeset.ts",
         "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/createChangeset.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/add/index.ts",
@@ -1269,8 +1283,20 @@
         "to": "packages/cli/src/utils/versionablePackages.ts"
       },
       {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/messages.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/git-tag/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/git-tag/index.ts",
@@ -1297,6 +1323,10 @@
         "to": "packages/cli/src/utils/output.ts"
       },
       {
+        "from": "packages/cli/src/commands/git-tag/utils.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
         "to": "packages/cli/src/commands/init/index.ts"
       },
@@ -1305,12 +1335,24 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/init/index.ts",
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/init/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pack/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/pack/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/pack/index.ts",
@@ -1333,12 +1375,24 @@
         "to": "packages/cli/src/utils/workspaceConcurrency.ts"
       },
       {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pre/index.test.ts",
         "to": "packages/cli/src/commands/pre/index.ts"
       },
       {
+        "from": "packages/cli/src/commands/pre/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pre/index.ts",
         "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pre/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
@@ -1351,6 +1405,10 @@
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
         "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
@@ -1365,6 +1423,10 @@
         "to": "packages/cli/src/lib/types.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
         "to": "packages/cli/src/commands/publish/getPublishTool.ts"
       },
@@ -1377,6 +1439,10 @@
         "to": "packages/cli/src/utils/gitTags.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/publish-plan/index.ts",
         "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
       },
@@ -1387,6 +1453,10 @@
       {
         "from": "packages/cli/src/commands/publish/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/publish/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish/getPublishTool.ts",
@@ -1437,8 +1507,20 @@
         "to": "packages/cli/src/utils/output.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/shared.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/status/__tests__/status.test.ts",
         "to": "packages/cli/src/commands/status/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/__tests__/status.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/status/index.ts",
@@ -1447,6 +1529,10 @@
       {
         "from": "packages/cli/src/commands/status/index.ts",
         "to": "packages/cli/src/utils/versionablePackages.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/version/index.ts",
@@ -1461,6 +1547,10 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/version/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/version/version.test.ts",
         "to": "packages/cli/src/commands/pre/index.ts"
       },
@@ -1469,12 +1559,20 @@
         "to": "packages/cli/src/commands/version/index.ts"
       },
       {
+        "from": "packages/cli/src/commands/version/version.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commit/commit.test.ts",
         "to": "packages/cli/src/commit/index.ts"
       },
       {
         "from": "packages/cli/src/index.ts",
         "to": "packages/cli/src/cli.ts"
+      },
+      {
+        "from": "packages/cli/src/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/lib/common.ts",
@@ -1567,6 +1665,10 @@
       {
         "from": "packages/cli/src/lib/yarn.ts",
         "to": "packages/cli/src/utils/streamNdjson.ts"
+      },
+      {
+        "from": "packages/cli/src/utils/cli-utilities.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/utils/createPromiseQueue.test.ts",
@@ -2051,6 +2153,7 @@
           "status": "observed",
           "evidence": [
             ".github/workflows/ci.yml",
+            ".github/workflows/codapult-guard.yml",
             ".github/workflows/pkg-pr-new.yml",
             ".github/workflows/publish.yml"
           ]

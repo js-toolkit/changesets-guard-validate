@@ -31,7 +31,7 @@
     "devDependencies": {
       "@changesets/changelog-github": "workspace:*",
       "@changesets/cli": "workspace:*",
-      "@codapult/guard": "0.10.0",
+      "@codapult/guard": "0.11.0",
       "@e18e/eslint-plugin": "^0.8.0",
       "@eslint/js": "10.0.1",
       "@manypkg/cli": "^0.25.1",
@@ -535,6 +535,11 @@
       "bytes": 4867
     },
     {
+      "path": ".github/workflows/codapult-guard.yml",
+      "kind": "other",
+      "bytes": 9380
+    },
+    {
       "path": ".github/workflows/pkg-pr-new.yml",
       "kind": "other",
       "bytes": 728
@@ -558,11 +563,6 @@
       "path": ".oxfmtrc.json",
       "kind": "other",
       "bytes": 139
-    },
-    {
-      "path": ".prettierignore",
-      "kind": "other",
-      "bytes": 56
     },
     {
       "path": ".vscode/launch.json",
@@ -773,11 +773,6 @@
       "path": "eslint.config.js",
       "kind": "config",
       "bytes": 3597
-    },
-    {
-      "path": "guard-verification.json",
-      "kind": "other",
-      "bytes": 6863
     },
     {
       "path": "netlify.toml",
@@ -1852,7 +1847,7 @@
     {
       "path": "pnpm-lock.yaml",
       "kind": "other",
-      "bytes": 195984
+      "bytes": 195986
     },
     {
       "path": "pnpm-workspace.yaml",
@@ -3648,10 +3643,12 @@
         "packages/cli/src/commands/publish/index.ts",
         "packages/cli/src/commands/status/index.ts",
         "packages/cli/src/commands/version/index.ts",
+        "packages/color/src/index.ts",
         "packages/errors/src/index.ts"
       ],
       "resolvedImportMap": {
         "@changesets/cli/package.json": "packages/cli/package.json",
+        "@changesets/color": "packages/color/src/index.ts",
         "../../errors/src/index.ts": "packages/errors/src/index.ts",
         "./commands/init/index.ts": "packages/cli/src/commands/init/index.ts",
         "./commands/add/index.ts": "packages/cli/src/commands/add/index.ts",
@@ -3766,9 +3763,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/add/index.ts",
         "packages/cli/src/utils/askWithEditor.ts",
-        "packages/cli/src/utils/cli-utilities.ts"
+        "packages/cli/src/utils/cli-utilities.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../../../utils/askWithEditor.ts": "packages/cli/src/utils/askWithEditor.ts",
         "../../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts",
         "../index.ts": "packages/cli/src/commands/add/index.ts"
@@ -3858,9 +3857,11 @@
       ],
       "resolvedImports": [
         "packages/cli/src/utils/askWithEditor.ts",
-        "packages/cli/src/utils/cli-utilities.ts"
+        "packages/cli/src/utils/cli-utilities.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../utils/askWithEditor.ts": "packages/cli/src/utils/askWithEditor.ts",
         "../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts"
       },
@@ -3954,9 +3955,11 @@
         "packages/cli/src/commit/getCommitFunctions.ts",
         "packages/cli/src/utils/cli-utilities.ts",
         "packages/cli/src/utils/read-config.ts",
-        "packages/cli/src/utils/versionablePackages.ts"
+        "packages/cli/src/utils/versionablePackages.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../commit/getCommitFunctions.ts": "packages/cli/src/commit/getCommitFunctions.ts",
         "../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts",
         "../../utils/read-config.ts": "packages/cli/src/utils/read-config.ts",
@@ -4003,8 +4006,12 @@
         "note",
         "patchReleases.join"
       ],
-      "resolvedImports": [],
-      "resolvedImportMap": {},
+      "resolvedImports": [
+        "packages/color/src/index.ts"
+      ],
+      "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts"
+      },
       "dynamicImports": [],
       "declarations": {
         "classes": 0,
@@ -4054,9 +4061,11 @@
         "vi.mocked"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/git-tag/index.ts"
+        "packages/cli/src/commands/git-tag/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../index.ts": "packages/cli/src/commands/git-tag/index.ts"
       },
       "dynamicImports": [],
@@ -4165,9 +4174,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
         "packages/cli/src/utils/gitTags.ts",
-        "packages/cli/src/utils/output.ts"
+        "packages/cli/src/utils/output.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../utils/gitTags.ts": "packages/cli/src/utils/gitTags.ts",
         "../../utils/output.ts": "packages/cli/src/utils/output.ts",
         "../publish-plan/getPublishPlan.ts": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
@@ -4241,9 +4252,11 @@
       ],
       "resolvedImports": [
         "packages/cli/src/commands/init/index.ts",
-        "packages/cli/src/utils/cli-utilities.ts"
+        "packages/cli/src/utils/cli-utilities.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts",
         "../index.ts": "packages/cli/src/commands/init/index.ts"
       },
@@ -4309,9 +4322,11 @@
         "process.cwd"
       ],
       "resolvedImports": [
-        "packages/cli/src/utils/cli-utilities.ts"
+        "packages/cli/src/utils/cli-utilities.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts"
       },
       "dynamicImports": [],
@@ -4384,9 +4399,11 @@
         "vi.restoreAllMocks"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/pack/index.ts"
+        "packages/cli/src/commands/pack/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../index.ts": "packages/cli/src/commands/pack/index.ts"
       },
       "dynamicImports": [],
@@ -4485,9 +4502,11 @@
         "packages/cli/src/commands/shared.ts",
         "packages/cli/src/utils/createPromiseQueue.ts",
         "packages/cli/src/utils/read-config.ts",
-        "packages/cli/src/utils/workspaceConcurrency.ts"
+        "packages/cli/src/utils/workspaceConcurrency.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../utils/createPromiseQueue.ts": "packages/cli/src/utils/createPromiseQueue.ts",
         "../../utils/read-config.ts": "packages/cli/src/utils/read-config.ts",
         "../../utils/workspaceConcurrency.ts": "packages/cli/src/utils/workspaceConcurrency.ts",
@@ -4547,9 +4566,11 @@
         "vi.mocked"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/pre/index.ts"
+        "packages/cli/src/commands/pre/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "./index.ts": "packages/cli/src/commands/pre/index.ts"
       },
       "dynamicImports": [],
@@ -4598,9 +4619,11 @@
         "process.cwd"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/shared.ts"
+        "packages/cli/src/commands/shared.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../shared.ts": "packages/cli/src/commands/shared.ts"
       },
       "dynamicImports": [],
@@ -4664,9 +4687,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
         "packages/cli/src/commands/publish/getPublishTool.ts",
-        "packages/cli/src/lib/types.ts"
+        "packages/cli/src/lib/types.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../../../lib/types.ts": "packages/cli/src/lib/types.ts",
         "../../publish/getPublishTool.ts": "packages/cli/src/commands/publish/getPublishTool.ts",
         "../getPublishPlan.ts": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
@@ -4735,9 +4760,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/publish-plan/index.ts",
         "packages/cli/src/commands/publish/getPublishTool.ts",
-        "packages/cli/src/lib/types.ts"
+        "packages/cli/src/lib/types.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../../../lib/types.ts": "packages/cli/src/lib/types.ts",
         "../../publish/getPublishTool.ts": "packages/cli/src/commands/publish/getPublishTool.ts",
         "../index.ts": "packages/cli/src/commands/publish-plan/index.ts"
@@ -4834,9 +4861,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/publish/getPublishTool.ts",
         "packages/cli/src/lib/common.ts",
-        "packages/cli/src/utils/gitTags.ts"
+        "packages/cli/src/utils/gitTags.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../lib/common.ts": "packages/cli/src/lib/common.ts",
         "../../utils/gitTags.ts": "packages/cli/src/utils/gitTags.ts",
         "../publish/getPublishTool.ts": "packages/cli/src/commands/publish/getPublishTool.ts"
@@ -4985,9 +5014,11 @@
         "vi.waitFor"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/publish/index.ts"
+        "packages/cli/src/commands/publish/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../index.ts": "packages/cli/src/commands/publish/index.ts"
       },
       "dynamicImports": [],
@@ -5180,9 +5211,11 @@
         "packages/cli/src/lib/types.ts",
         "packages/cli/src/utils/cli-utilities.ts",
         "packages/cli/src/utils/output.ts",
-        "packages/cli/src/utils/read-config.ts"
+        "packages/cli/src/utils/read-config.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../lib/common.ts": "packages/cli/src/lib/common.ts",
         "../../lib/types.ts": "packages/cli/src/lib/types.ts",
         "../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts",
@@ -5228,8 +5261,12 @@
         "log.error",
         "path.resolve"
       ],
-      "resolvedImports": [],
-      "resolvedImportMap": {},
+      "resolvedImports": [
+        "packages/color/src/index.ts"
+      ],
+      "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts"
+      },
       "dynamicImports": [],
       "declarations": {
         "classes": 0,
@@ -5300,9 +5337,11 @@
         "writeChangeset"
       ],
       "resolvedImports": [
-        "packages/cli/src/commands/status/index.ts"
+        "packages/cli/src/commands/status/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../index.ts": "packages/cli/src/commands/status/index.ts"
       },
       "dynamicImports": [],
@@ -5379,9 +5418,11 @@
       "resolvedImports": [
         "packages/cli/src/commands/shared.ts",
         "packages/cli/src/utils/read-config.ts",
-        "packages/cli/src/utils/versionablePackages.ts"
+        "packages/cli/src/utils/versionablePackages.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../utils/read-config.ts": "packages/cli/src/utils/read-config.ts",
         "../../utils/versionablePackages.ts": "packages/cli/src/utils/versionablePackages.ts",
         "../shared.ts": "packages/cli/src/commands/shared.ts"
@@ -5481,9 +5522,11 @@
         "packages/cli/src/commands/shared.ts",
         "packages/cli/src/commit/getCommitFunctions.ts",
         "packages/cli/src/utils/cli-utilities.ts",
-        "packages/cli/src/utils/read-config.ts"
+        "packages/cli/src/utils/read-config.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts",
         "../../commit/getCommitFunctions.ts": "packages/cli/src/commit/getCommitFunctions.ts",
         "../../utils/cli-utilities.ts": "packages/cli/src/utils/cli-utilities.ts",
         "../../utils/read-config.ts": "packages/cli/src/utils/read-config.ts",
@@ -5592,9 +5635,11 @@
       ],
       "resolvedImports": [
         "packages/cli/src/commands/pre/index.ts",
-        "packages/cli/src/commands/version/index.ts"
+        "packages/cli/src/commands/version/index.ts",
+        "scripts/test-utils/src/index.ts"
       ],
       "resolvedImportMap": {
+        "@changesets/test-utils": "scripts/test-utils/src/index.ts",
         "../pre/index.ts": "packages/cli/src/commands/pre/index.ts",
         "./index.ts": "packages/cli/src/commands/version/index.ts"
       },
@@ -5750,10 +5795,12 @@
       ],
       "resolvedImports": [
         "packages/cli/package.json",
-        "packages/cli/src/cli.ts"
+        "packages/cli/src/cli.ts",
+        "packages/color/src/index.ts"
       ],
       "resolvedImportMap": {
         "@changesets/cli/package.json": "packages/cli/package.json",
+        "@changesets/color": "packages/color/src/index.ts",
         "./cli.ts": "packages/cli/src/cli.ts"
       },
       "dynamicImports": [],
@@ -6368,8 +6415,12 @@
         "task",
         "text"
       ],
-      "resolvedImports": [],
-      "resolvedImportMap": {},
+      "resolvedImports": [
+        "packages/color/src/index.ts"
+      ],
+      "resolvedImportMap": {
+        "@changesets/color": "packages/color/src/index.ts"
+      },
       "dynamicImports": [],
       "declarations": {
         "classes": 0,
@@ -9526,6 +9577,7 @@
       "packages": [],
       "files": [
         ".github/workflows/ci.yml",
+        ".github/workflows/codapult-guard.yml",
         ".github/workflows/pkg-pr-new.yml",
         ".github/workflows/publish.yml"
       ],
@@ -9787,6 +9839,7 @@
       ],
       "files": [
         ".github/workflows/ci.yml",
+        ".github/workflows/codapult-guard.yml",
         ".github/workflows/pkg-pr-new.yml",
         ".github/workflows/publish.yml",
         "packages/config/scripts/generate-json-schema.ts",
@@ -9813,41 +9866,34 @@
   },
   "git": {
     "repository": true,
-    "branch": "main",
+    "branch": "codapult-guard/setup",
     "dirty": true,
     "changedFiles": [
-      ".codapult/guard/agent.json",
-      ".codapult/guard/architecture.json",
-      ".codapult/guard/baseline-meta.json",
-      ".codapult/guard/baseline.json",
       ".codapult/guard/cache.json",
-      ".codapult/guard/contracts.json",
-      ".codapult/guard/conventions.json",
-      ".codapult/guard/history/b09779a3d503a581df98a81384d5849db969eb03-working-tree-76877295a05c.json",
-      ".codapult/guard/history/runs/guard-319e2d0b-16fc-47b7-975c-5bd3bdc577b7.json",
-      ".codapult/guard/project.json",
-      ".codapult/guard/proposals.json",
-      ".codapult/guard/rules.json",
-      ".codapult/guard/state/current.json",
-      ".codapult/guard/state/generations/1793441587610-4f57ef3c-8b37-4939-937e-2a25d62c8301/architecture.json",
-      ".codapult/guard/state/generations/1793441587610-4f57ef3c-8b37-4939-937e-2a25d62c8301/conventions.json",
-      ".codapult/guard/state/generations/1793441587610-4f57ef3c-8b37-4939-937e-2a25d62c8301/manifest.json",
-      ".codapult/guard/state/generations/1793441587610-4f57ef3c-8b37-4939-937e-2a25d62c8301/project.json",
-      ".codapult/guard/waivers.json",
-      ".prettierignore",
-      "guard-verification.json",
+      ".codapult/guard/history/runs/guard-353d868b-2345-4bd6-8cb1-d7935f120c37.json",
+      ".github/workflows/codapult-guard.yml",
       "package.json",
       "pnpm-lock.yaml"
     ],
     "status": [
-      "M package.json",
+      "M .github/workflows/codapult-guard.yml",
+      " M package.json",
       " M pnpm-lock.yaml",
-      "?? .codapult/",
-      "?? .prettierignore",
-      "?? guard-verification.json"
+      "?? .codapult/guard/cache.json",
+      "?? .codapult/guard/history/"
     ],
-    "diffStat": "package.json   |   3 +-\n pnpm-lock.yaml | 788 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n 2 files changed, 790 insertions(+), 1 deletion(-)",
+    "diffStat": ".github/workflows/codapult-guard.yml |  7 ++++---\n package.json                         |  2 +-\n pnpm-lock.yaml                       | 14 +++++++-------\n 3 files changed, 12 insertions(+), 11 deletions(-)",
     "history": [
+      {
+        "hash": "780dcda55df2d84553abeef668fc0d8025853a3a",
+        "date": "2026-10-31T15:28:41+05:00",
+        "subject": "fix: align validation workflow with Guard 0.10.0"
+      },
+      {
+        "hash": "a33144c6e06874887473c22fff490ac7ecf32aee",
+        "date": "2026-10-31T15:26:19+05:00",
+        "subject": "test: add Codapult Guard CI to validation fork"
+      },
       {
         "hash": "b09779a3d503a581df98a81384d5849db969eb03",
         "date": "2026-10-26T07:16:01Z",
@@ -9987,16 +10033,6 @@
         "hash": "9aa6b67ac653680a73d2d7a078ceaf28c3975129",
         "date": "2026-08-24T18:35:47Z",
         "subject": "docs: mention `github-token` in migration (#2268)"
-      },
-      {
-        "hash": "4d7b4fbd013f009f03cccbbfc8d7a708d836bd79",
-        "date": "2026-08-24T11:17:27Z",
-        "subject": "Set cacheKeyFn for github dataloader (#2264)"
-      },
-      {
-        "hash": "ff2b0752d329a8ffbba0b02bf52f2287ed0dd264",
-        "date": "2026-08-24T03:12:49Z",
-        "subject": "Build(deps-dev): Bump @lydell/node-pty (#2254)"
       }
     ]
   },
@@ -10329,12 +10365,12 @@
       {
         "from": "other",
         "to": "other",
-        "count": 92
+        "count": 107
       },
       {
         "from": "tests",
         "to": "other",
-        "count": 58
+        "count": 68
       },
       {
         "from": "tests",
@@ -10586,6 +10622,10 @@
       },
       {
         "from": "packages/cli/src/cli.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
         "to": "packages/errors/src/index.ts"
       },
       {
@@ -10601,12 +10641,20 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/add/createChangeset.ts",
         "to": "packages/cli/src/utils/askWithEditor.ts"
       },
       {
         "from": "packages/cli/src/commands/add/createChangeset.ts",
         "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/createChangeset.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/add/index.ts",
@@ -10633,8 +10681,20 @@
         "to": "packages/cli/src/utils/versionablePackages.ts"
       },
       {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/messages.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/git-tag/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/git-tag/index.ts",
@@ -10661,6 +10721,10 @@
         "to": "packages/cli/src/utils/output.ts"
       },
       {
+        "from": "packages/cli/src/commands/git-tag/utils.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
         "to": "packages/cli/src/commands/init/index.ts"
       },
@@ -10669,12 +10733,24 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/init/index.ts",
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/init/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pack/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/pack/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/pack/index.ts",
@@ -10697,12 +10773,24 @@
         "to": "packages/cli/src/utils/workspaceConcurrency.ts"
       },
       {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pre/index.test.ts",
         "to": "packages/cli/src/commands/pre/index.ts"
       },
       {
+        "from": "packages/cli/src/commands/pre/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/pre/index.ts",
         "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pre/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
@@ -10715,6 +10803,10 @@
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
         "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
@@ -10729,6 +10821,10 @@
         "to": "packages/cli/src/lib/types.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
         "to": "packages/cli/src/commands/publish/getPublishTool.ts"
       },
@@ -10741,6 +10837,10 @@
         "to": "packages/cli/src/utils/gitTags.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/publish-plan/index.ts",
         "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
       },
@@ -10751,6 +10851,10 @@
       {
         "from": "packages/cli/src/commands/publish/__tests__/index.test.ts",
         "to": "packages/cli/src/commands/publish/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/__tests__/index.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/publish/getPublishTool.ts",
@@ -10801,8 +10905,20 @@
         "to": "packages/cli/src/utils/output.ts"
       },
       {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/shared.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/status/__tests__/status.test.ts",
         "to": "packages/cli/src/commands/status/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/__tests__/status.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/status/index.ts",
@@ -10811,6 +10927,10 @@
       {
         "from": "packages/cli/src/commands/status/index.ts",
         "to": "packages/cli/src/utils/versionablePackages.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/commands/version/index.ts",
@@ -10825,6 +10945,10 @@
         "to": "packages/cli/src/utils/cli-utilities.ts"
       },
       {
+        "from": "packages/cli/src/commands/version/index.ts",
+        "to": "packages/color/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commands/version/version.test.ts",
         "to": "packages/cli/src/commands/pre/index.ts"
       },
@@ -10833,12 +10957,20 @@
         "to": "packages/cli/src/commands/version/index.ts"
       },
       {
+        "from": "packages/cli/src/commands/version/version.test.ts",
+        "to": "scripts/test-utils/src/index.ts"
+      },
+      {
         "from": "packages/cli/src/commit/commit.test.ts",
         "to": "packages/cli/src/commit/index.ts"
       },
       {
         "from": "packages/cli/src/index.ts",
         "to": "packages/cli/src/cli.ts"
+      },
+      {
+        "from": "packages/cli/src/index.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/lib/common.ts",
@@ -10931,6 +11063,10 @@
       {
         "from": "packages/cli/src/lib/yarn.ts",
         "to": "packages/cli/src/utils/streamNdjson.ts"
+      },
+      {
+        "from": "packages/cli/src/utils/cli-utilities.ts",
+        "to": "packages/color/src/index.ts"
       },
       {
         "from": "packages/cli/src/utils/createPromiseQueue.test.ts",

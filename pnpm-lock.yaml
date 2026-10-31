@@ -20,8 +20,8 @@ importers:
         specifier: workspace:*
         version: link:packages/cli
       '@codapult/guard':
-        specifier: 0.10.0
-        version: 0.10.0
+        specifier: 0.11.0
+        version: 0.11.0
       '@e18e/eslint-plugin':
         specifier: ^0.8.0
         version: 0.8.0(eslint@10.10.0)
@@ -611,8 +611,8 @@ packages:
     resolution: {integrity: sha512-y7/yvZ2TPAnR9+jnc00klvNNLkJiXFFrQA/hlLCcxA9a2A4zQIOimyFQ9XfwYKiGD1fb5GY8vbKIIgO8d5Tb2A==}
     engines: {node: '>= 20.12.0'}
 
-  '@codapult/guard@0.10.0':
-    resolution: {integrity: sha512-i8RbUQ18rqoOq2ZzzVuRoJMf3rV92C6ExqGSXO7fpFlVZKg0jcTf8JO6jbYgoluOkIbre80Vyvae3F3lmjLRQw==}
+  '@codapult/guard@0.11.0':
+    resolution: {integrity: sha512-GSa8th0EbUdB+B6AExjfWK2FJEn2CTWYhf5LLxVlYP1gkWXnWkg8BE96CQqtjxxMYN4CNx9w13/4Axej9qbyNg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -3668,7 +3668,7 @@ snapshots:
       fast-wrap-ansi: 0.2.2
       sisteransi: 1.0.5
 
-  '@codapult/guard@0.10.0':
+  '@codapult/guard@0.11.0':
     dependencies:
       '@modelcontextprotocol/sdk': 1.32.2(zod@4.6.7)
       commander: 15.0.0
@@ -3676,6 +3676,7 @@ snapshots:
       semver: 7.8.5
       ts-morph: 28.0.0
       typescript: '@typescript/typescript6@6.0.2'
+      yaml: 2.9.1
       zod: 4.6.7
     transitivePeerDependencies:
       - '@cfworker/json-schema'
@@ -6117,8 +6118,7 @@ snapshots:
 
   yaml@2.9.0: {}
 
-  yaml@2.9.1:
-    optional: true
+  yaml@2.9.1: {}
 
   yocto-queue@0.1.0: {}
 
