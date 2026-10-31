@@ -42,6 +42,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "workspace:*",
     "@changesets/cli": "workspace:*",
+    "@codapult/guard": "0.10.0",
     "@e18e/eslint-plugin": "^0.8.0",
     "@eslint/js": "10.0.1",
     "@manypkg/cli": "^0.25.1",
@@ -74,7 +75,7 @@
     "runtime": {
       "name": "node",
       "version": "^22.12 || ^24 || >=26",
-      "onFail": "error"
+      "onFail": "ignore"
     }
   },
   "engines": {

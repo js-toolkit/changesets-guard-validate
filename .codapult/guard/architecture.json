@@ -1,0 +1,2114 @@
+{
+  "version": 1,
+  "generatedBy": "codapult-guard init",
+  "frameworks": [],
+  "workspacePackages": [
+    {
+      "path": "packages/apply-release-plan",
+      "name": "@changesets/apply-release-plan",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/config",
+        "@changesets/format",
+        "@changesets/git",
+        "@changesets/should-skip-package",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@manypkg/get-packages",
+        "import-meta-resolve",
+        "jsonc-parser",
+        "semver",
+        "tinyexec"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/assemble-release-plan",
+      "name": "@changesets/assemble-release-plan",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/config",
+        "@changesets/errors",
+        "@changesets/get-dependents-graph",
+        "@changesets/should-skip-package",
+        "@changesets/types",
+        "semver"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/changelog-git",
+      "name": "@changesets/changelog-git",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/types"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/changelog-github",
+      "name": "@changesets/changelog-github",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/get-github-info",
+        "@changesets/parse",
+        "@changesets/types"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/cli",
+      "name": "@changesets/cli",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/apply-release-plan",
+        "@changesets/assemble-release-plan",
+        "@changesets/changelog-git",
+        "@changesets/color",
+        "@changesets/config",
+        "@changesets/errors",
+        "@changesets/get-dependents-graph",
+        "@changesets/git",
+        "@changesets/pre",
+        "@changesets/read",
+        "@changesets/should-skip-package",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@changesets/write",
+        "@clack/prompts",
+        "@manypkg/get-packages",
+        "@pnpm/deps.graph-sequencer",
+        "@types/semver",
+        "cac",
+        "human-id",
+        "import-meta-resolve",
+        "launch-editor",
+        "outdent",
+        "package-manager-detector",
+        "semver",
+        "tinyexec"
+      ],
+      "exports": [
+        ".",
+        "./changelog",
+        "./commit",
+        "./package.json",
+        "./bin.js"
+      ]
+    },
+    {
+      "path": "packages/color",
+      "name": "@changesets/color",
+      "private": true,
+      "scripts": {},
+      "dependencies": [],
+      "exports": [
+        "."
+      ]
+    },
+    {
+      "path": "packages/config",
+      "name": "@changesets/config",
+      "private": false,
+      "scripts": {
+        "generate-json-schema": "node scripts/generate-json-schema.ts"
+      },
+      "dependencies": [
+        "@changesets/get-dependents-graph",
+        "@changesets/should-skip-package",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@manypkg/get-packages",
+        "@types/picomatch",
+        "@valibot/to-json-schema",
+        "picomatch",
+        "valibot"
+      ],
+      "exports": [
+        ".",
+        "./package.json",
+        "./schema.json"
+      ]
+    },
+    {
+      "path": "packages/errors",
+      "name": "@changesets/errors",
+      "private": false,
+      "scripts": {},
+      "dependencies": [],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/get-dependents-graph",
+      "name": "@changesets/get-dependents-graph",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/color",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "semver"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/get-github-info",
+      "name": "@changesets/get-github-info",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "dataloader",
+        "nock"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/get-release-plan",
+      "name": "@changesets/get-release-plan",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/assemble-release-plan",
+        "@changesets/config",
+        "@changesets/pre",
+        "@changesets/read",
+        "@changesets/types",
+        "@manypkg/get-packages"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/get-version-range-type",
+      "name": "@changesets/get-version-range-type",
+      "private": false,
+      "scripts": {},
+      "dependencies": [],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/git",
+      "name": "@changesets/git",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/errors",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@changesets/write",
+        "@manypkg/get-packages",
+        "@types/picomatch",
+        "picomatch",
+        "tinyexec"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/logger",
+      "name": "@changesets/logger",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/color"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/parse",
+      "name": "@changesets/parse",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/types",
+        "outdent",
+        "yaml"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/pre",
+      "name": "@changesets/pre",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/errors",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@manypkg/get-packages"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/read",
+      "name": "@changesets/read",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/git",
+        "@changesets/parse",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@changesets/write"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/release-utils",
+      "name": "@changesets/release-utils",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/git",
+        "@changesets/pre",
+        "@changesets/read",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "@changesets/write",
+        "@manypkg/get-packages",
+        "tinyexec"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/should-skip-package",
+      "name": "@changesets/should-skip-package",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/types"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/types",
+      "name": "@changesets/types",
+      "private": false,
+      "scripts": {},
+      "dependencies": [],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "packages/write",
+      "name": "@changesets/write",
+      "private": false,
+      "scripts": {},
+      "dependencies": [
+        "@changesets/format",
+        "@changesets/parse",
+        "@changesets/test-utils",
+        "@changesets/types",
+        "human-id"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "scripts/e2e",
+      "name": "@changesets/e2e",
+      "private": true,
+      "scripts": {
+        "test": "vitest run",
+        "types:check": "tsc"
+      },
+      "dependencies": [
+        "@changesets/cli",
+        "@changesets/config",
+        "@changesets/git",
+        "@changesets/test-utils",
+        "@lydell/node-pty",
+        "@pnpm/pnpr",
+        "@tsconfig/node24",
+        "@types/node",
+        "modern-tar",
+        "npm-10",
+        "npm-11",
+        "npm-12",
+        "pnpm-10",
+        "pnpm-11",
+        "pnpm-12",
+        "tinyexec",
+        "typescript",
+        "vitest",
+        "yarn-4"
+      ]
+    },
+    {
+      "path": "scripts/test-utils",
+      "name": "@changesets/test-utils",
+      "private": true,
+      "scripts": {},
+      "dependencies": [
+        "fs-fixture",
+        "tinyexec"
+      ],
+      "exports": [
+        ".",
+        "./package.json"
+      ]
+    },
+    {
+      "path": "site",
+      "name": "@changesets/docs",
+      "private": true,
+      "scripts": {
+        "dev": "vitepress dev",
+        "build": "vitepress build",
+        "preview": "vitepress preview",
+        "generate-og": "node scripts/generate-og.ts"
+      },
+      "dependencies": [
+        "@iconify-json/logos",
+        "takumi-js",
+        "unplugin-icons",
+        "vitepress",
+        "vitepress-plugin-graphviz",
+        "vitepress-plugin-group-icons",
+        "vue"
+      ]
+    }
+  ],
+  "capabilities": {
+    "runtime": {
+      "status": "observed",
+      "confidence": "high",
+      "packages": [],
+      "files": [
+        ".changeset/config.json",
+        ".editorconfig",
+        "eslint.config.js",
+        "package.json",
+        "packages/apply-release-plan/package.json",
+        "packages/apply-release-plan/tsdown.config.ts",
+        "packages/assemble-release-plan/package.json",
+        "packages/assemble-release-plan/tsdown.config.ts",
+        "packages/changelog-git/package.json",
+        "packages/changelog-git/tsdown.config.ts",
+        "packages/changelog-github/package.json",
+        "packages/changelog-github/tsdown.config.ts",
+        "packages/cli/package.json",
+        "packages/cli/src/utils/read-config.ts",
+        "packages/cli/tsdown.config.ts",
+        "packages/color/package.json",
+        "packages/config/package.json",
+        "packages/config/src/config.ts",
+        "packages/config/tsdown.config.ts",
+        "packages/errors/package.json",
+        "packages/errors/tsdown.config.ts",
+        "packages/get-dependents-graph/package.json",
+        "packages/get-dependents-graph/tsdown.config.ts",
+        "packages/get-github-info/package.json",
+        "packages/get-github-info/tsdown.config.ts",
+        "packages/get-release-plan/package.json",
+        "packages/get-release-plan/tsdown.config.ts",
+        "packages/get-version-range-type/package.json",
+        "packages/get-version-range-type/tsdown.config.ts",
+        "packages/git/package.json",
+        "packages/git/tsdown.config.ts",
+        "packages/logger/package.json",
+        "packages/logger/tsdown.config.ts",
+        "packages/parse/package.json",
+        "packages/parse/tsdown.config.ts",
+        "packages/pre/package.json",
+        "packages/pre/tsdown.config.ts",
+        "packages/read/package.json",
+        "packages/read/tsdown.config.ts",
+        "packages/release-utils/package.json",
+        "packages/release-utils/tsdown.config.ts",
+        "packages/should-skip-package/package.json",
+        "packages/should-skip-package/tsdown.config.ts",
+        "packages/types/package.json",
+        "packages/types/tsdown.config.ts",
+        "packages/write/package.json",
+        "packages/write/tsdown.config.ts",
+        "scripts/e2e/package.json",
+        "scripts/e2e/tsconfig.json",
+        "scripts/e2e/vitest.config.ts",
+        "scripts/test-utils/package.json",
+        "site/.vitepress/config.ts",
+        "site/package.json",
+        "site/tsconfig.json",
+        "tsconfig.json",
+        "tsdown.config.ts",
+        "vitest.config.ts"
+      ],
+      "imports": [],
+      "evidence": [
+        "package metadata and runtime imports"
+      ]
+    },
+    "persistence": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        "packages/config/schema.json"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:db|database|repositories|schema|schemas|migrations|drizzle)(?:\\/|[^/]*$)",
+        "database and ORM conventions"
+      ]
+    },
+    "env": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        "packages/get-github-info/src/env.ts"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:env|environment)(?:\\/|[^/]*$)|(?:^|\\/)\\.env(?:\\.example)?$|(?:^|\\/)(?:config|configuration)\\/env(?:[^/]*)$",
+        "environment and configuration conventions"
+      ]
+    },
+    "deployment": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/pkg-pr-new.yml",
+        ".github/workflows/publish.yml"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:Dockerfile|docker-compose|infra|terraform|pulumi|helm|k8s|\\.github\\/workflows)(?:\\/|[^/]*$)",
+        "deployment and infrastructure conventions"
+      ]
+    },
+    "testing": {
+      "status": "observed",
+      "confidence": "high",
+      "packages": [
+        "@vitest/coverage-v8",
+        "@vitest/eslint-plugin",
+        "vitest"
+      ],
+      "files": [
+        "packages/apply-release-plan/src/edit-json.test.ts",
+        "packages/apply-release-plan/src/get-changelog-entry.test.ts",
+        "packages/apply-release-plan/src/index.test.ts",
+        "packages/assemble-release-plan/src/increment.test.ts",
+        "packages/assemble-release-plan/src/index.test.ts",
+        "packages/assemble-release-plan/src/test-utils.ts",
+        "packages/changelog-github/src/index.test.ts",
+        "packages/changelog-github/src/render-template.test.ts",
+        "packages/cli/src/cli.test.ts",
+        "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+        "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "packages/cli/src/commands/pack/__tests__/index.test.ts",
+        "packages/cli/src/commands/pre/index.test.ts",
+        "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "packages/cli/src/commands/publish/__tests__/index.test.ts",
+        "packages/cli/src/commands/status/__tests__/status.test.ts",
+        "packages/cli/src/commands/version/version.test.ts",
+        "packages/cli/src/commit/commit.test.ts",
+        "packages/cli/src/lib/npm.test.ts",
+        "packages/cli/src/lib/pnpm.test.ts",
+        "packages/cli/src/lib/yarn.test.ts",
+        "packages/cli/src/utils/createPromiseQueue.test.ts",
+        "packages/cli/src/utils/getLastJsonObjectFromString.test.ts",
+        "packages/config/scripts/json-schema.test.ts",
+        "packages/config/src/parse.test.ts",
+        "packages/errors/src/index.test.ts",
+        "packages/get-dependents-graph/src/get-dependency-graph.test.ts",
+        "packages/get-github-info/src/get-commit-info.test.ts",
+        "packages/get-github-info/src/get-pull-request-info.test.ts",
+        "packages/get-version-range-type/src/index.test.ts",
+        "packages/git/src/index.test.ts",
+        "packages/logger/src/index.test.ts",
+        "packages/parse/src/index.test.ts",
+        "packages/pre/src/index.test.ts",
+        "packages/read/src/index.test.ts",
+        "packages/release-utils/src/__snapshots__/utils.test.ts.snap",
+        "packages/release-utils/src/run.test.ts",
+        "packages/release-utils/src/utils.test.ts",
+        "packages/write/src/index.test.ts",
+        "scripts/e2e/__snapshots__/pack.test.ts.snap",
+        "scripts/e2e/__snapshots__/publish.test.ts.snap",
+        "scripts/e2e/e2e-utils.ts",
+        "scripts/e2e/pack.test.ts",
+        "scripts/e2e/package.json",
+        "scripts/e2e/publish.test.ts",
+        "scripts/e2e/tsconfig.json",
+        "scripts/e2e/vitest.config.ts"
+      ],
+      "imports": [
+        "vitest"
+      ],
+      "evidence": [
+        "dependency: @vitest/coverage-v8, @vitest/eslint-plugin, vitest",
+        "file pattern: (?:^|\\/)(?:__tests__|tests?|e2e)(?:\\/|[^/]*$)|\\.(?:test|spec)\\.",
+        "import pattern: vitest|jest|playwright|cypress|mocha|ava",
+        "test runner and test layout conventions"
+      ]
+    },
+    "storage": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        "assets/images/changesets-avatar-dark.png",
+        "assets/images/changesets-avatar-dark.svg",
+        "assets/images/changesets-avatar-light.png",
+        "assets/images/changesets-avatar-light.svg",
+        "assets/images/changesets-banner-dark.png",
+        "assets/images/changesets-banner-dark.svg",
+        "assets/images/changesets-banner-light.png",
+        "assets/images/changesets-banner-light.svg",
+        "assets/images/changesets-icon-dark.png",
+        "assets/images/changesets-icon-dark.svg",
+        "assets/images/changesets-icon-light.png",
+        "assets/images/changesets-icon-light.svg",
+        "assets/images/changesets-logo-dark.png",
+        "assets/images/changesets-logo-dark.svg",
+        "assets/images/changesets-logo-light.png",
+        "assets/images/changesets-logo-light.svg",
+        "assets/images/key.png",
+        "site/assets/cli-example.webp",
+        "site/assets/pack-then-publish-dark.excalidraw.svg",
+        "site/assets/pack-then-publish-light.excalidraw.svg",
+        "site/assets/peer-bump-dark.excalidraw.svg",
+        "site/assets/peer-bump-light.excalidraw.svg",
+        "site/assets/size-diff-dark.excalidraw.svg",
+        "site/assets/size-diff-light.excalidraw.svg"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:storage|uploads?|media|assets)(?:\\/|[^/]*$)",
+        "file and object storage conventions"
+      ]
+    },
+    "i18n": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        "packages/cli/src/commands/add/messages.ts"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:i18n|locales?|messages|translations?)(?:\\/|[^/]*$)",
+        "internationalization conventions"
+      ]
+    },
+    "dependencies": {
+      "status": "observed",
+      "confidence": "high",
+      "packages": [
+        "@changesets/changelog-github",
+        "@changesets/cli",
+        "@codapult/guard",
+        "@e18e/eslint-plugin",
+        "@eslint/js",
+        "@manypkg/cli",
+        "@oxc-node/core",
+        "@tsconfig/node22",
+        "@tsconfig/node24",
+        "@types/node",
+        "@types/semver",
+        "@vitest/coverage-v8",
+        "@vitest/eslint-plugin",
+        "eslint",
+        "eslint-config-prettier",
+        "eslint-plugin-import-lite",
+        "eslint-plugin-n",
+        "lint-staged",
+        "oxfmt",
+        "pkg-pr-new",
+        "publint",
+        "tsdown",
+        "typescript",
+        "typescript-eslint",
+        "vitest"
+      ],
+      "files": [
+        "package.json",
+        "packages/apply-release-plan/package.json",
+        "packages/assemble-release-plan/package.json",
+        "packages/changelog-git/package.json",
+        "packages/changelog-github/package.json",
+        "packages/cli/package.json",
+        "packages/color/package.json",
+        "packages/config/package.json",
+        "packages/errors/package.json",
+        "packages/get-dependents-graph/package.json",
+        "packages/get-github-info/package.json",
+        "packages/get-release-plan/package.json",
+        "packages/get-version-range-type/package.json",
+        "packages/git/package.json",
+        "packages/logger/package.json",
+        "packages/parse/package.json",
+        "packages/pre/package.json",
+        "packages/read/package.json",
+        "packages/release-utils/package.json",
+        "packages/should-skip-package/package.json",
+        "packages/types/package.json",
+        "packages/write/package.json",
+        "pnpm-lock.yaml",
+        "scripts/e2e/package.json",
+        "scripts/test-utils/package.json",
+        "site/package.json"
+      ],
+      "imports": [],
+      "evidence": [
+        "package manifest and lockfile metadata"
+      ]
+    },
+    "configs": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [
+        ".changeset/config.json",
+        "eslint.config.js",
+        "packages/apply-release-plan/tsdown.config.ts",
+        "packages/assemble-release-plan/tsdown.config.ts",
+        "packages/changelog-git/tsdown.config.ts",
+        "packages/changelog-github/tsdown.config.ts",
+        "packages/cli/tsdown.config.ts",
+        "packages/config/package.json",
+        "packages/config/schema.json",
+        "packages/config/scripts/generate-json-schema.ts",
+        "packages/config/scripts/json-schema.test.ts",
+        "packages/config/src/config.ts",
+        "packages/config/src/defaults.ts",
+        "packages/config/src/index.ts",
+        "packages/config/src/parse.test.ts",
+        "packages/config/src/parse.ts",
+        "packages/config/src/rules.ts",
+        "packages/config/src/utils.ts",
+        "packages/config/tsdown.config.ts",
+        "packages/errors/tsdown.config.ts",
+        "packages/get-dependents-graph/tsdown.config.ts",
+        "packages/get-github-info/tsdown.config.ts",
+        "packages/get-release-plan/tsdown.config.ts",
+        "packages/get-version-range-type/tsdown.config.ts",
+        "packages/git/tsdown.config.ts",
+        "packages/logger/tsdown.config.ts",
+        "packages/parse/tsdown.config.ts",
+        "packages/pre/tsdown.config.ts",
+        "packages/read/tsdown.config.ts",
+        "packages/release-utils/tsdown.config.ts",
+        "packages/should-skip-package/tsdown.config.ts",
+        "packages/types/tsdown.config.ts",
+        "packages/write/tsdown.config.ts",
+        "scripts/e2e/vitest.config.ts",
+        "site/.vitepress/config.ts",
+        "tsdown.config.ts",
+        "vitest.config.ts"
+      ],
+      "imports": [],
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:config|configs|configuration)(?:\\/|[^/]*$)|(?:^|\\/)[^/]+\\.config\\.[cm]?[jt]sx?$",
+        "configuration files and loaders"
+      ]
+    },
+    "webhooks": {
+      "status": "observed",
+      "confidence": "medium",
+      "packages": [],
+      "files": [],
+      "imports": [
+        "node:events"
+      ],
+      "evidence": [
+        "import pattern: (?:webhooks?|events?)(\\/|$)",
+        "webhook and event receiver conventions"
+      ]
+    },
+    "tooling": {
+      "status": "observed",
+      "confidence": "high",
+      "packages": [
+        "eslint",
+        "typescript"
+      ],
+      "files": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/pkg-pr-new.yml",
+        ".github/workflows/publish.yml",
+        "packages/config/scripts/generate-json-schema.ts",
+        "packages/config/scripts/json-schema.test.ts",
+        "scripts/e2e/__snapshots__/pack.test.ts.snap",
+        "scripts/e2e/__snapshots__/publish.test.ts.snap",
+        "scripts/e2e/e2e-utils.ts",
+        "scripts/e2e/pack.test.ts",
+        "scripts/e2e/package.json",
+        "scripts/e2e/publish.test.ts",
+        "scripts/e2e/tsconfig.json",
+        "scripts/e2e/vitest.config.ts",
+        "scripts/test-utils/package.json",
+        "scripts/test-utils/src/index.ts",
+        "site/scripts/generate-og.ts"
+      ],
+      "imports": [],
+      "evidence": [
+        "dependency: eslint, typescript",
+        "file pattern: (?:^|\\/)(?:\\.github\\/workflows|\\.husky|\\.lefthook|scripts?|tools?)(?:\\/|[^/]*$)",
+        "static analysis, formatting, dependency graph, and hook tooling"
+      ]
+    }
+  },
+  "map": {
+    "layers": {
+      "tests": [
+        "packages/apply-release-plan/src/edit-json.test.ts",
+        "packages/apply-release-plan/src/get-changelog-entry.test.ts",
+        "packages/apply-release-plan/src/index.test.ts",
+        "packages/assemble-release-plan/src/increment.test.ts",
+        "packages/assemble-release-plan/src/index.test.ts",
+        "packages/changelog-github/src/index.test.ts",
+        "packages/changelog-github/src/render-template.test.ts",
+        "packages/cli/src/cli.test.ts",
+        "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+        "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "packages/cli/src/commands/pack/__tests__/index.test.ts",
+        "packages/cli/src/commands/pre/index.test.ts",
+        "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "packages/cli/src/commands/publish/__tests__/index.test.ts",
+        "packages/cli/src/commands/status/__tests__/status.test.ts",
+        "packages/cli/src/commands/version/version.test.ts",
+        "packages/cli/src/commit/commit.test.ts",
+        "packages/cli/src/lib/npm.test.ts",
+        "packages/cli/src/lib/pnpm.test.ts",
+        "packages/cli/src/lib/yarn.test.ts",
+        "packages/cli/src/utils/createPromiseQueue.test.ts",
+        "packages/cli/src/utils/getLastJsonObjectFromString.test.ts",
+        "packages/config/scripts/json-schema.test.ts",
+        "packages/config/src/parse.test.ts",
+        "packages/errors/src/index.test.ts",
+        "packages/get-dependents-graph/src/get-dependency-graph.test.ts",
+        "packages/get-github-info/src/get-commit-info.test.ts",
+        "packages/get-github-info/src/get-pull-request-info.test.ts",
+        "packages/get-version-range-type/src/index.test.ts",
+        "packages/git/src/index.test.ts",
+        "packages/logger/src/index.test.ts",
+        "packages/parse/src/index.test.ts",
+        "packages/pre/src/index.test.ts",
+        "packages/read/src/index.test.ts",
+        "packages/release-utils/src/run.test.ts",
+        "packages/release-utils/src/utils.test.ts",
+        "packages/write/src/index.test.ts",
+        "scripts/e2e/pack.test.ts",
+        "scripts/e2e/publish.test.ts"
+      ],
+      "other": [
+        "packages/apply-release-plan/src/edit-json.ts",
+        "packages/apply-release-plan/src/get-changelog-entry.ts",
+        "packages/apply-release-plan/src/index.ts",
+        "packages/apply-release-plan/src/test-utils/failing-functions.ts",
+        "packages/apply-release-plan/src/utils.ts",
+        "packages/apply-release-plan/src/version-package.ts",
+        "packages/assemble-release-plan/src/apply-links.ts",
+        "packages/assemble-release-plan/src/determine-dependents.ts",
+        "packages/assemble-release-plan/src/flatten-releases.ts",
+        "packages/assemble-release-plan/src/increment.ts",
+        "packages/assemble-release-plan/src/index.ts",
+        "packages/assemble-release-plan/src/match-fixed-constraint.ts",
+        "packages/assemble-release-plan/src/test-utils.ts",
+        "packages/assemble-release-plan/src/types.ts",
+        "packages/assemble-release-plan/src/utils.ts",
+        "packages/changelog-git/src/index.ts",
+        "packages/changelog-github/src/index.ts",
+        "packages/changelog-github/src/render-template.ts",
+        "packages/cli/bin.js",
+        "packages/cli/src/changelog.ts",
+        "packages/cli/src/cli.ts",
+        "packages/cli/src/commands/add/createChangeset.ts",
+        "packages/cli/src/commands/add/index.ts",
+        "packages/cli/src/commands/add/messages.ts",
+        "packages/cli/src/commands/git-tag/index.ts",
+        "packages/cli/src/commands/git-tag/utils.ts",
+        "packages/cli/src/commands/init/index.ts",
+        "packages/cli/src/commands/pack/index.ts",
+        "packages/cli/src/commands/pre/index.ts",
+        "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "packages/cli/src/commands/publish-plan/index.ts",
+        "packages/cli/src/commands/publish/getPublishTool.ts",
+        "packages/cli/src/commands/publish/index.ts",
+        "packages/cli/src/commands/shared.ts",
+        "packages/cli/src/commands/status/index.ts",
+        "packages/cli/src/commands/version/index.ts",
+        "packages/cli/src/commit/getCommitFunctions.ts",
+        "packages/cli/src/commit/index.ts",
+        "packages/cli/src/index.ts",
+        "packages/cli/src/ponyfills/async-disposable-stack.ts",
+        "packages/cli/src/ponyfills/promise-try.ts",
+        "packages/cli/src/utils/askWithEditor.ts",
+        "packages/cli/src/utils/cli-utilities.ts",
+        "packages/cli/src/utils/createPromiseQueue.ts",
+        "packages/cli/src/utils/getLastJsonObjectFromString.ts",
+        "packages/cli/src/utils/gitTags.ts",
+        "packages/cli/src/utils/output.ts",
+        "packages/cli/src/utils/streamNdjson.ts",
+        "packages/cli/src/utils/versionablePackages.ts",
+        "packages/cli/src/utils/workspaceConcurrency.ts",
+        "packages/color/src/index.ts",
+        "packages/errors/src/index.ts",
+        "packages/get-dependents-graph/src/get-dependency-graph.ts",
+        "packages/get-dependents-graph/src/index.ts",
+        "packages/get-github-info/src/dataloader.ts",
+        "packages/get-github-info/src/env.ts",
+        "packages/get-github-info/src/get-commit-info.ts",
+        "packages/get-github-info/src/get-pull-request-info.ts",
+        "packages/get-github-info/src/index.ts",
+        "packages/get-github-info/src/utils.ts",
+        "packages/get-release-plan/src/index.ts",
+        "packages/get-version-range-type/src/index.ts",
+        "packages/git/src/index.ts",
+        "packages/logger/src/index.ts",
+        "packages/parse/src/index.ts",
+        "packages/pre/src/index.ts",
+        "packages/read/src/index.ts",
+        "packages/release-utils/src/gitUtils.ts",
+        "packages/release-utils/src/index.ts",
+        "packages/release-utils/src/readChangesetState.ts",
+        "packages/release-utils/src/run.ts",
+        "packages/release-utils/src/utils.ts",
+        "packages/should-skip-package/src/index.ts",
+        "packages/types/src/index.ts",
+        "packages/write/src/index.ts",
+        "scripts/e2e/e2e-utils.ts",
+        "scripts/test-utils/src/index.ts",
+        "site/.vitepress/theme/index.ts",
+        "site/.vitepress/theme/sync-code-groups.ts",
+        "site/.vitepress/theme/utils.ts",
+        "site/blog/index.data.ts",
+        "site/guide/cli.data.ts",
+        "site/packages/[pkg].paths.ts",
+        "site/scripts/generate-og.ts"
+      ],
+      "infrastructure": [
+        "packages/cli/src/lib/common.ts",
+        "packages/cli/src/lib/npm.ts",
+        "packages/cli/src/lib/pnpm.ts",
+        "packages/cli/src/lib/testing/error-snapshots.ts",
+        "packages/cli/src/lib/types.ts",
+        "packages/cli/src/lib/yarn.ts"
+      ],
+      "config": [
+        "packages/config/schema.json",
+        "packages/config/scripts/generate-json-schema.ts",
+        "packages/config/src/defaults.ts",
+        "packages/config/src/index.ts",
+        "packages/config/src/parse.ts",
+        "packages/config/src/rules.ts",
+        "packages/config/src/utils.ts"
+      ]
+    },
+    "edges": [
+      {
+        "from": "other",
+        "to": "other",
+        "count": 92
+      },
+      {
+        "from": "tests",
+        "to": "other",
+        "count": 58
+      },
+      {
+        "from": "tests",
+        "to": "infrastructure",
+        "count": 9
+      },
+      {
+        "from": "infrastructure",
+        "to": "infrastructure",
+        "count": 8
+      },
+      {
+        "from": "other",
+        "to": "infrastructure",
+        "count": 7
+      },
+      {
+        "from": "infrastructure",
+        "to": "other",
+        "count": 5
+      },
+      {
+        "from": "config",
+        "to": "config",
+        "count": 4
+      },
+      {
+        "from": "tests",
+        "to": "config",
+        "count": 2
+      }
+    ]
+  },
+  "dependencyGraph": {
+    "edges": [
+      {
+        "from": "packages/apply-release-plan/src/edit-json.test.ts",
+        "to": "packages/apply-release-plan/src/edit-json.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/get-changelog-entry.test.ts",
+        "to": "packages/apply-release-plan/src/get-changelog-entry.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/get-changelog-entry.ts",
+        "to": "packages/apply-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/index.test.ts",
+        "to": "packages/apply-release-plan/src/index.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/index.ts",
+        "to": "packages/apply-release-plan/src/edit-json.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/index.ts",
+        "to": "packages/apply-release-plan/src/get-changelog-entry.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/index.ts",
+        "to": "packages/apply-release-plan/src/version-package.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/version-package.ts",
+        "to": "packages/apply-release-plan/src/edit-json.ts"
+      },
+      {
+        "from": "packages/apply-release-plan/src/version-package.ts",
+        "to": "packages/apply-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/apply-links.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/apply-links.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/determine-dependents.ts",
+        "to": "packages/assemble-release-plan/src/increment.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/determine-dependents.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/determine-dependents.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/flatten-releases.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/flatten-releases.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/increment.test.ts",
+        "to": "packages/assemble-release-plan/src/increment.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/increment.test.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/increment.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/increment.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.test.ts",
+        "to": "packages/assemble-release-plan/src/index.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.test.ts",
+        "to": "packages/assemble-release-plan/src/test-utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/apply-links.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/determine-dependents.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/flatten-releases.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/increment.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/match-fixed-constraint.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/index.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/match-fixed-constraint.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/match-fixed-constraint.ts",
+        "to": "packages/assemble-release-plan/src/utils.ts"
+      },
+      {
+        "from": "packages/assemble-release-plan/src/utils.ts",
+        "to": "packages/assemble-release-plan/src/types.ts"
+      },
+      {
+        "from": "packages/changelog-github/src/index.test.ts",
+        "to": "packages/changelog-github/src/index.ts"
+      },
+      {
+        "from": "packages/changelog-github/src/index.ts",
+        "to": "packages/changelog-github/src/render-template.ts"
+      },
+      {
+        "from": "packages/changelog-github/src/render-template.test.ts",
+        "to": "packages/changelog-github/src/render-template.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/cli.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/add/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/git-tag/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/init/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/pack/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/pre/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/publish/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/status/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.test.ts",
+        "to": "packages/cli/src/commands/version/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/add/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/git-tag/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/init/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/pack/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/pre/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/publish-plan/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/publish/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/status/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/cli/src/commands/version/index.ts"
+      },
+      {
+        "from": "packages/cli/src/cli.ts",
+        "to": "packages/errors/src/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "to": "packages/cli/src/commands/add/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "to": "packages/cli/src/utils/askWithEditor.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/__tests__/add.test.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/createChangeset.ts",
+        "to": "packages/cli/src/utils/askWithEditor.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/createChangeset.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/commands/add/createChangeset.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/commands/add/messages.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/commit/getCommitFunctions.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/add/index.ts",
+        "to": "packages/cli/src/utils/versionablePackages.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+        "to": "packages/cli/src/commands/git-tag/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/index.ts",
+        "to": "packages/cli/src/commands/git-tag/utils.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/index.ts",
+        "to": "packages/cli/src/utils/output.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/utils.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/utils.ts",
+        "to": "packages/cli/src/utils/gitTags.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/git-tag/utils.ts",
+        "to": "packages/cli/src/utils/output.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "to": "packages/cli/src/commands/init/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/init/__tests__/command.test.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/init/index.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/__tests__/index.test.ts",
+        "to": "packages/cli/src/commands/pack/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/cli/src/commands/publish/getPublishTool.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/cli/src/utils/createPromiseQueue.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pack/index.ts",
+        "to": "packages/cli/src/utils/workspaceConcurrency.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pre/index.test.ts",
+        "to": "packages/cli/src/commands/pre/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/pre/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "to": "packages/cli/src/commands/publish/getPublishTool.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "to": "packages/cli/src/commands/publish/getPublishTool.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "to": "packages/cli/src/commands/publish/getPublishTool.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "to": "packages/cli/src/lib/common.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+        "to": "packages/cli/src/utils/gitTags.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/index.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish-plan/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/__tests__/index.test.ts",
+        "to": "packages/cli/src/commands/publish/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/getPublishTool.ts",
+        "to": "packages/cli/src/lib/npm.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/getPublishTool.ts",
+        "to": "packages/cli/src/lib/pnpm.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/getPublishTool.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/getPublishTool.ts",
+        "to": "packages/cli/src/lib/yarn.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/commands/git-tag/utils.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/commands/publish/getPublishTool.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/lib/common.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/publish/index.ts",
+        "to": "packages/cli/src/utils/output.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/__tests__/status.test.ts",
+        "to": "packages/cli/src/commands/status/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/status/index.ts",
+        "to": "packages/cli/src/utils/versionablePackages.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/version/index.ts",
+        "to": "packages/cli/src/commands/shared.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/version/index.ts",
+        "to": "packages/cli/src/commit/getCommitFunctions.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/version/index.ts",
+        "to": "packages/cli/src/utils/cli-utilities.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/version/version.test.ts",
+        "to": "packages/cli/src/commands/pre/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commands/version/version.test.ts",
+        "to": "packages/cli/src/commands/version/index.ts"
+      },
+      {
+        "from": "packages/cli/src/commit/commit.test.ts",
+        "to": "packages/cli/src/commit/index.ts"
+      },
+      {
+        "from": "packages/cli/src/index.ts",
+        "to": "packages/cli/src/cli.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/common.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/common.ts",
+        "to": "packages/cli/src/utils/createPromiseQueue.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.test.ts",
+        "to": "packages/cli/src/lib/npm.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.test.ts",
+        "to": "packages/cli/src/lib/testing/error-snapshots.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.test.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.ts",
+        "to": "packages/cli/src/lib/common.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/npm.ts",
+        "to": "packages/cli/src/utils/getLastJsonObjectFromString.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.test.ts",
+        "to": "packages/cli/src/lib/pnpm.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.test.ts",
+        "to": "packages/cli/src/lib/testing/error-snapshots.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.test.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.ts",
+        "to": "packages/cli/src/lib/common.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.ts",
+        "to": "packages/cli/src/lib/npm.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/pnpm.ts",
+        "to": "packages/cli/src/utils/getLastJsonObjectFromString.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/types.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/yarn.test.ts",
+        "to": "packages/cli/src/commands/publish-plan/getPublishPlan.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/yarn.test.ts",
+        "to": "packages/cli/src/lib/yarn.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/yarn.ts",
+        "to": "packages/cli/src/lib/common.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/yarn.ts",
+        "to": "packages/cli/src/lib/types.ts"
+      },
+      {
+        "from": "packages/cli/src/lib/yarn.ts",
+        "to": "packages/cli/src/utils/streamNdjson.ts"
+      },
+      {
+        "from": "packages/cli/src/utils/createPromiseQueue.test.ts",
+        "to": "packages/cli/src/utils/createPromiseQueue.ts"
+      },
+      {
+        "from": "packages/cli/src/utils/createPromiseQueue.ts",
+        "to": "packages/cli/src/ponyfills/promise-try.ts"
+      },
+      {
+        "from": "packages/cli/src/utils/getLastJsonObjectFromString.test.ts",
+        "to": "packages/cli/src/utils/getLastJsonObjectFromString.ts"
+      },
+      {
+        "from": "packages/config/src/index.ts",
+        "to": "packages/config/src/defaults.ts"
+      },
+      {
+        "from": "packages/config/src/index.ts",
+        "to": "packages/config/src/parse.ts"
+      },
+      {
+        "from": "packages/config/src/parse.test.ts",
+        "to": "packages/config/src/defaults.ts"
+      },
+      {
+        "from": "packages/config/src/parse.test.ts",
+        "to": "packages/config/src/parse.ts"
+      },
+      {
+        "from": "packages/config/src/parse.ts",
+        "to": "packages/config/src/rules.ts"
+      },
+      {
+        "from": "packages/config/src/rules.ts",
+        "to": "packages/config/src/utils.ts"
+      },
+      {
+        "from": "packages/errors/src/index.test.ts",
+        "to": "packages/errors/src/index.ts"
+      },
+      {
+        "from": "packages/get-dependents-graph/src/get-dependency-graph.test.ts",
+        "to": "packages/get-dependents-graph/src/get-dependency-graph.ts"
+      },
+      {
+        "from": "packages/get-dependents-graph/src/index.ts",
+        "to": "packages/get-dependents-graph/src/get-dependency-graph.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/dataloader.ts",
+        "to": "packages/get-github-info/src/env.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-commit-info.test.ts",
+        "to": "packages/get-github-info/src/dataloader.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-commit-info.test.ts",
+        "to": "packages/get-github-info/src/get-commit-info.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-commit-info.ts",
+        "to": "packages/get-github-info/src/dataloader.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-commit-info.ts",
+        "to": "packages/get-github-info/src/utils.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-pull-request-info.test.ts",
+        "to": "packages/get-github-info/src/dataloader.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-pull-request-info.test.ts",
+        "to": "packages/get-github-info/src/get-pull-request-info.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-pull-request-info.ts",
+        "to": "packages/get-github-info/src/dataloader.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/get-pull-request-info.ts",
+        "to": "packages/get-github-info/src/utils.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/index.ts",
+        "to": "packages/get-github-info/src/get-commit-info.ts"
+      },
+      {
+        "from": "packages/get-github-info/src/index.ts",
+        "to": "packages/get-github-info/src/get-pull-request-info.ts"
+      },
+      {
+        "from": "packages/get-version-range-type/src/index.test.ts",
+        "to": "packages/get-version-range-type/src/index.ts"
+      },
+      {
+        "from": "packages/git/src/index.test.ts",
+        "to": "packages/git/src/index.ts"
+      },
+      {
+        "from": "packages/logger/src/index.test.ts",
+        "to": "packages/logger/src/index.ts"
+      },
+      {
+        "from": "packages/parse/src/index.test.ts",
+        "to": "packages/parse/src/index.ts"
+      },
+      {
+        "from": "packages/pre/src/index.test.ts",
+        "to": "packages/pre/src/index.ts"
+      },
+      {
+        "from": "packages/read/src/index.test.ts",
+        "to": "packages/read/src/index.ts"
+      },
+      {
+        "from": "packages/release-utils/src/index.ts",
+        "to": "packages/release-utils/src/readChangesetState.ts"
+      },
+      {
+        "from": "packages/release-utils/src/index.ts",
+        "to": "packages/release-utils/src/run.ts"
+      },
+      {
+        "from": "packages/release-utils/src/index.ts",
+        "to": "packages/release-utils/src/utils.ts"
+      },
+      {
+        "from": "packages/release-utils/src/run.test.ts",
+        "to": "packages/release-utils/src/run.ts"
+      },
+      {
+        "from": "packages/release-utils/src/run.ts",
+        "to": "packages/release-utils/src/gitUtils.ts"
+      },
+      {
+        "from": "packages/release-utils/src/run.ts",
+        "to": "packages/release-utils/src/readChangesetState.ts"
+      },
+      {
+        "from": "packages/release-utils/src/run.ts",
+        "to": "packages/release-utils/src/utils.ts"
+      },
+      {
+        "from": "packages/release-utils/src/utils.test.ts",
+        "to": "packages/release-utils/src/utils.ts"
+      },
+      {
+        "from": "packages/write/src/index.test.ts",
+        "to": "packages/write/src/index.ts"
+      },
+      {
+        "from": "scripts/e2e/pack.test.ts",
+        "to": "scripts/e2e/e2e-utils.ts"
+      },
+      {
+        "from": "scripts/e2e/publish.test.ts",
+        "to": "scripts/e2e/e2e-utils.ts"
+      },
+      {
+        "from": "site/.vitepress/theme/index.ts",
+        "to": "site/.vitepress/theme/sync-code-groups.ts"
+      },
+      {
+        "from": "site/blog/index.data.ts",
+        "to": "site/.vitepress/theme/utils.ts"
+      },
+      {
+        "from": "site/guide/cli.data.ts",
+        "to": "packages/cli/src/cli.ts"
+      },
+      {
+        "from": "site/scripts/generate-og.ts",
+        "to": "site/.vitepress/theme/utils.ts"
+      }
+    ]
+  },
+  "layers": {
+    "tests": [
+      "packages/apply-release-plan/src/edit-json.test.ts",
+      "packages/apply-release-plan/src/get-changelog-entry.test.ts",
+      "packages/apply-release-plan/src/index.test.ts",
+      "packages/assemble-release-plan/src/increment.test.ts",
+      "packages/assemble-release-plan/src/index.test.ts",
+      "packages/changelog-github/src/index.test.ts",
+      "packages/changelog-github/src/render-template.test.ts",
+      "packages/cli/src/cli.test.ts",
+      "packages/cli/src/commands/add/__tests__/add.test.ts",
+      "packages/cli/src/commands/git-tag/__tests__/index.test.ts",
+      "packages/cli/src/commands/init/__tests__/command.test.ts",
+      "packages/cli/src/commands/pack/__tests__/index.test.ts",
+      "packages/cli/src/commands/pre/index.test.ts",
+      "packages/cli/src/commands/publish-plan/__tests__/getPublishPlan.test.ts",
+      "packages/cli/src/commands/publish-plan/__tests__/index.test.ts",
+      "packages/cli/src/commands/publish/__tests__/index.test.ts",
+      "packages/cli/src/commands/status/__tests__/status.test.ts",
+      "packages/cli/src/commands/version/version.test.ts",
+      "packages/cli/src/commit/commit.test.ts",
+      "packages/cli/src/lib/npm.test.ts",
+      "packages/cli/src/lib/pnpm.test.ts",
+      "packages/cli/src/lib/yarn.test.ts",
+      "packages/cli/src/utils/createPromiseQueue.test.ts",
+      "packages/cli/src/utils/getLastJsonObjectFromString.test.ts",
+      "packages/config/scripts/json-schema.test.ts",
+      "packages/config/src/parse.test.ts",
+      "packages/errors/src/index.test.ts",
+      "packages/get-dependents-graph/src/get-dependency-graph.test.ts",
+      "packages/get-github-info/src/get-commit-info.test.ts",
+      "packages/get-github-info/src/get-pull-request-info.test.ts",
+      "packages/get-version-range-type/src/index.test.ts",
+      "packages/git/src/index.test.ts",
+      "packages/logger/src/index.test.ts",
+      "packages/parse/src/index.test.ts",
+      "packages/pre/src/index.test.ts",
+      "packages/read/src/index.test.ts",
+      "packages/release-utils/src/run.test.ts",
+      "packages/release-utils/src/utils.test.ts",
+      "packages/write/src/index.test.ts",
+      "scripts/e2e/pack.test.ts",
+      "scripts/e2e/publish.test.ts"
+    ],
+    "other": [
+      "packages/apply-release-plan/src/edit-json.ts",
+      "packages/apply-release-plan/src/get-changelog-entry.ts",
+      "packages/apply-release-plan/src/index.ts",
+      "packages/apply-release-plan/src/test-utils/failing-functions.ts",
+      "packages/apply-release-plan/src/utils.ts",
+      "packages/apply-release-plan/src/version-package.ts",
+      "packages/assemble-release-plan/src/apply-links.ts",
+      "packages/assemble-release-plan/src/determine-dependents.ts",
+      "packages/assemble-release-plan/src/flatten-releases.ts",
+      "packages/assemble-release-plan/src/increment.ts",
+      "packages/assemble-release-plan/src/index.ts",
+      "packages/assemble-release-plan/src/match-fixed-constraint.ts",
+      "packages/assemble-release-plan/src/test-utils.ts",
+      "packages/assemble-release-plan/src/types.ts",
+      "packages/assemble-release-plan/src/utils.ts",
+      "packages/changelog-git/src/index.ts",
+      "packages/changelog-github/src/index.ts",
+      "packages/changelog-github/src/render-template.ts",
+      "packages/cli/bin.js",
+      "packages/cli/src/changelog.ts",
+      "packages/cli/src/cli.ts",
+      "packages/cli/src/commands/add/createChangeset.ts",
+      "packages/cli/src/commands/add/index.ts",
+      "packages/cli/src/commands/add/messages.ts",
+      "packages/cli/src/commands/git-tag/index.ts",
+      "packages/cli/src/commands/git-tag/utils.ts",
+      "packages/cli/src/commands/init/index.ts",
+      "packages/cli/src/commands/pack/index.ts",
+      "packages/cli/src/commands/pre/index.ts",
+      "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+      "packages/cli/src/commands/publish-plan/index.ts",
+      "packages/cli/src/commands/publish/getPublishTool.ts",
+      "packages/cli/src/commands/publish/index.ts",
+      "packages/cli/src/commands/shared.ts",
+      "packages/cli/src/commands/status/index.ts",
+      "packages/cli/src/commands/version/index.ts",
+      "packages/cli/src/commit/getCommitFunctions.ts",
+      "packages/cli/src/commit/index.ts",
+      "packages/cli/src/index.ts",
+      "packages/cli/src/ponyfills/async-disposable-stack.ts",
+      "packages/cli/src/ponyfills/promise-try.ts",
+      "packages/cli/src/utils/askWithEditor.ts",
+      "packages/cli/src/utils/cli-utilities.ts",
+      "packages/cli/src/utils/createPromiseQueue.ts",
+      "packages/cli/src/utils/getLastJsonObjectFromString.ts",
+      "packages/cli/src/utils/gitTags.ts",
+      "packages/cli/src/utils/output.ts",
+      "packages/cli/src/utils/streamNdjson.ts",
+      "packages/cli/src/utils/versionablePackages.ts",
+      "packages/cli/src/utils/workspaceConcurrency.ts",
+      "packages/color/src/index.ts",
+      "packages/errors/src/index.ts",
+      "packages/get-dependents-graph/src/get-dependency-graph.ts",
+      "packages/get-dependents-graph/src/index.ts",
+      "packages/get-github-info/src/dataloader.ts",
+      "packages/get-github-info/src/env.ts",
+      "packages/get-github-info/src/get-commit-info.ts",
+      "packages/get-github-info/src/get-pull-request-info.ts",
+      "packages/get-github-info/src/index.ts",
+      "packages/get-github-info/src/utils.ts",
+      "packages/get-release-plan/src/index.ts",
+      "packages/get-version-range-type/src/index.ts",
+      "packages/git/src/index.ts",
+      "packages/logger/src/index.ts",
+      "packages/parse/src/index.ts",
+      "packages/pre/src/index.ts",
+      "packages/read/src/index.ts",
+      "packages/release-utils/src/gitUtils.ts",
+      "packages/release-utils/src/index.ts",
+      "packages/release-utils/src/readChangesetState.ts",
+      "packages/release-utils/src/run.ts",
+      "packages/release-utils/src/utils.ts",
+      "packages/should-skip-package/src/index.ts",
+      "packages/types/src/index.ts",
+      "packages/write/src/index.ts",
+      "scripts/e2e/e2e-utils.ts",
+      "scripts/test-utils/src/index.ts",
+      "site/.vitepress/theme/index.ts",
+      "site/.vitepress/theme/sync-code-groups.ts",
+      "site/.vitepress/theme/utils.ts",
+      "site/blog/index.data.ts",
+      "site/guide/cli.data.ts",
+      "site/packages/[pkg].paths.ts",
+      "site/scripts/generate-og.ts"
+    ],
+    "infrastructure": [
+      "packages/cli/src/lib/common.ts",
+      "packages/cli/src/lib/npm.ts",
+      "packages/cli/src/lib/pnpm.ts",
+      "packages/cli/src/lib/testing/error-snapshots.ts",
+      "packages/cli/src/lib/types.ts",
+      "packages/cli/src/lib/yarn.ts"
+    ],
+    "config": [
+      "packages/config/schema.json",
+      "packages/config/scripts/generate-json-schema.ts",
+      "packages/config/src/defaults.ts",
+      "packages/config/src/index.ts",
+      "packages/config/src/parse.ts",
+      "packages/config/src/rules.ts",
+      "packages/config/src/utils.ts"
+    ]
+  },
+  "boundaries": [],
+  "persistence": {
+    "packages": [],
+    "schemaFiles": [
+      "packages/config/schema.json",
+      "packages/config/scripts/generate-json-schema.ts"
+    ]
+  },
+  "authorization": {
+    "implementationModules": []
+  },
+  "billing": {
+    "providerCandidates": []
+  },
+  "routes": [],
+  "environment": {
+    "references": [
+      {
+        "name": "CHANGESETS_OUTPUT",
+        "files": [
+          "packages/cli/src/cli.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "GITHUB_GRAPHQL_URL",
+        "files": [
+          "packages/get-github-info/src/env.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "GITHUB_REPOSITORY",
+        "files": [
+          "packages/changelog-github/src/index.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "GITHUB_SERVER_URL",
+        "files": [
+          "packages/changelog-github/src/index.ts",
+          "packages/get-github-info/src/env.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "GITHUB_TOKEN",
+        "files": [
+          "packages/get-github-info/src/env.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "NPM_CONFIG_OTP",
+        "files": [
+          "packages/cli/src/lib/npm.ts",
+          "packages/cli/src/lib/pnpm.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "PATH",
+        "files": [
+          "scripts/e2e/e2e-utils.ts"
+        ],
+        "declared": false
+      },
+      {
+        "name": "PNPM_CONFIG_OTP",
+        "files": [
+          "packages/cli/src/lib/pnpm.ts"
+        ],
+        "declared": false
+      }
+    ]
+  },
+  "cycles": [
+    [
+      "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+      "packages/cli/src/commands/publish/getPublishTool.ts",
+      "packages/cli/src/lib/common.ts",
+      "packages/cli/src/lib/npm.ts",
+      "packages/cli/src/lib/pnpm.ts",
+      "packages/cli/src/lib/types.ts",
+      "packages/cli/src/lib/yarn.ts"
+    ]
+  ],
+  "packs": [
+    {
+      "id": "database",
+      "title": "Database and ORM",
+      "focus": [
+        "schema drift",
+        "migrations",
+        "repository boundaries"
+      ]
+    },
+    {
+      "id": "deployment",
+      "title": "Deployment and operations",
+      "focus": [
+        "environment",
+        "health checks",
+        "release safety"
+      ]
+    },
+    {
+      "id": "storage",
+      "title": "File and object storage",
+      "focus": [
+        "upload validation",
+        "access control",
+        "public/private boundaries"
+      ]
+    },
+    {
+      "id": "i18n",
+      "title": "Internationalization",
+      "focus": [
+        "locale boundaries",
+        "message completeness",
+        "formatting"
+      ]
+    }
+  ],
+  "packAssessments": [
+    {
+      "id": "database",
+      "status": "observed",
+      "evidence": [
+        "2 schema file(s)"
+      ],
+      "gaps": [],
+      "checks": [
+        {
+          "id": "migration-path",
+          "status": "observed",
+          "evidence": [
+            "site/guide/migration.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "status": "observed",
+      "evidence": [
+        "0 deployment package(s)"
+      ],
+      "gaps": [],
+      "checks": [
+        {
+          "id": "operational-health",
+          "status": "observed",
+          "evidence": [
+            ".github/workflows/ci.yml",
+            ".github/workflows/pkg-pr-new.yml",
+            ".github/workflows/publish.yml"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "status": "observed",
+      "evidence": [
+        "0 storage package(s)"
+      ],
+      "gaps": [],
+      "checks": [
+        {
+          "id": "upload-boundary",
+          "status": "observed",
+          "evidence": [
+            "assets/README.md",
+            "assets/images/README.md",
+            "assets/images/changesets-avatar-dark.png",
+            "assets/images/changesets-avatar-dark.svg",
+            "assets/images/changesets-avatar-light.png"
+          ]
+        },
+        {
+          "id": "access-control",
+          "status": "observed",
+          "evidence": [
+            "packages/apply-release-plan/src/index.ts",
+            "packages/cli/src/commands/init/index.ts",
+            "packages/cli/src/commands/publish-plan/getPublishPlan.ts",
+            "packages/cli/src/commands/shared.ts",
+            "packages/cli/src/commands/version/version.test.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i18n",
+      "status": "observed",
+      "evidence": [
+        "0 i18n package(s)"
+      ],
+      "gaps": [],
+      "checks": [
+        {
+          "id": "message-catalog",
+          "status": "observed",
+          "evidence": [
+            "packages/cli/src/commands/add/messages.ts",
+            "packages/cli/src/commands/add/createChangeset.ts",
+            "packages/cli/src/commands/add/index.ts",
+            "packages/cli/src/commands/publish/index.ts",
+            "packages/cli/src/commands/status/index.ts"
+          ]
+        }
+      ]
+    }
+  ]
+}
