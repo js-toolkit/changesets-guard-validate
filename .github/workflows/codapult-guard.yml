@@ -20,9 +20,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          # The base commit is required so verify can read policy from the
-          # protected side of a pull request instead of trusting the PR copy.
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          # On pull requests, github.sha is the merge commit. This keeps the
+          # base project's Guard dependency and policy available while testing
+          # the proposed changes. Verify still reads policy from base.sha below.
+          ref: ${{ github.sha }}
           fetch-depth: 0
 
       - name: Verify Guard runtime dependencies against base
