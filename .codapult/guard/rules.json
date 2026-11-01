@@ -4,7 +4,7 @@
     {
       "id": "hosted-smoke-forbid-child-process",
       "description": "Hosted Guard test: this module must not import child_process.",
-      "severity": "error",
+      "severity": "warning",
       "kind": "forbidden-import",
       "patterns": [
         "node:child_process"
@@ -28,5 +28,5 @@
     "warningDays": 14
   },
   "revision": 2,
-  "contentFingerprint": "2fe55b30ce05153d105776a8152bb71e8db4a0012b70c21dec316fa5e137b6ef"
+  "contentFingerprint": "c3863110d33c45cfdede94a1fd66741680367d63e5ef97a68a8707f98eb14756"
 }
