@@ -1,6 +1,24 @@
 {
   "version": 1,
-  "rules": [],
+  "rules": [
+    {
+      "id": "hosted-smoke-forbid-child-process",
+      "description": "Hosted Guard test: this module must not import child_process.",
+      "severity": "error",
+      "kind": "forbidden-import",
+      "patterns": [
+        "node:child_process"
+      ],
+      "files": [
+        "packages/write/src/index.ts"
+      ],
+      "status": "active",
+      "confidence": "high",
+      "evidence": [
+        "Hosted Guard 0.12.0 base-policy test"
+      ]
+    }
+  ],
   "approval": {
     "mode": "local",
     "allowMcpApproval": true,
@@ -9,6 +27,6 @@
   "waiverPolicy": {
     "warningDays": 14
   },
-  "revision": 1,
-  "contentFingerprint": "1ae062148e97cb74a235586949b55b2608977b4efe497216857cc7c8e83f120d"
+  "revision": 2,
+  "contentFingerprint": "2fe55b30ce05153d105776a8152bb71e8db4a0012b70c21dec316fa5e137b6ef"
 }
