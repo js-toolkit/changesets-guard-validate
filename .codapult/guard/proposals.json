@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-31T10:13:07.626Z",
+  "rules": [],
+  "contracts": [
+    {
+      "id": "persistence-boundary",
+      "statement": "Application-facing code should use the observed persistence boundary instead of scattering database access.",
+      "guidance": [
+        "Prefer the observed repository or service modules for database access."
+      ],
+      "references": [
+        "packages/config/schema.json",
+        "packages/config/scripts/generate-json-schema.ts"
+      ],
+      "status": "proposed",
+      "confidence": "low",
+      "evidence": [
+        "file pattern: (?:^|\\/)(?:db|database|repositories|schema|schemas|migrations|drizzle)(?:\\/|[^/]*$)",
+        "database and ORM conventions"
+      ]
+    }
+  ],
+  "questions": [
+    "Which modules are allowed to access the database directly?"
+  ],
+  "projectFingerprint": "76877295a05ca5abcf2e0ecf6467ac260cf4be655c52017ebdc94660c328e359",
+  "revision": 1,
+  "contentFingerprint": "ca3ab3a03a79cabbd4ec86cf77a3253d448ce6b4f5633360ab0a1cb061d70cb2",
+  "proposalId": "9f73dbb627050ab4"
+}

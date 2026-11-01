@@ -13,6 +13,7 @@ dedupePeerDependents: true
 
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
+  - "@codapult/guard@0.11.0"
   - "@pnpm/exe.android-arm64@12.4.1"
   - "@pnpm/exe.android-x64@12.4.1"
   - "@pnpm/exe.darwin-arm64@12.4.1"

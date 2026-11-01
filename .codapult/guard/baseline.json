@@ -1,0 +1,11 @@
+[
+  "architecture-cycle|packages/cli/src/commands/publish-plan/getPublishPlan.ts|packages/cli/src/commands/publish/getPublishTool.ts|packages/cli/src/lib/common.ts|packages/cli/src/lib/npm.ts|packages/cli/src/lib/pnpm.ts|packages/cli/src/lib/types.ts|packages/cli/src/lib/yarn.ts",
+  "undeclared-environment-reference|CHANGESETS_OUTPUT|packages/cli/src/cli.ts",
+  "undeclared-environment-reference|GITHUB_GRAPHQL_URL|packages/get-github-info/src/env.ts",
+  "undeclared-environment-reference|GITHUB_REPOSITORY|packages/changelog-github/src/index.ts",
+  "undeclared-environment-reference|GITHUB_SERVER_URL|packages/changelog-github/src/index.ts",
+  "undeclared-environment-reference|GITHUB_TOKEN|packages/get-github-info/src/env.ts",
+  "undeclared-environment-reference|NPM_CONFIG_OTP|packages/cli/src/lib/npm.ts",
+  "undeclared-environment-reference|PATH|scripts/e2e/e2e-utils.ts",
+  "undeclared-environment-reference|PNPM_CONFIG_OTP|packages/cli/src/lib/pnpm.ts"
+]
