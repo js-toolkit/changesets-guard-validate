@@ -169,7 +169,7 @@ jobs:
 
       - name: Prepare PR review packet
         if: github.event_name == 'pull_request'
-        run: pnpm exec codapult-guard review --base "${{ github.event.pull_request.base.sha }}" --json > guard-review.json
+        run: pnpm exec codapult-guard review --base "${{ github.event.pull_request.base.sha }}" > guard-review.json
 
       - name: Upload PR review packet
         if: always() && github.event_name == 'pull_request'
