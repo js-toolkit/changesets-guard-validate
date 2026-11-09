@@ -9,6 +9,22 @@
   "waiverPolicy": {
     "warningDays": 14
   },
-  "revision": 1,
-  "contentFingerprint": "1ae062148e97cb74a235586949b55b2608977b4efe497216857cc7c8e83f120d"
+  "revision": 2,
+  "contentFingerprint": "4f256912acd5af4f1ca37018f38f145b1bcef05528c8c324ad09521c908684b1",
+  "githubActions": {
+    "workflows": [
+      {
+        "path": ".github/workflows/codapult-guard.yml",
+        "job": "guard",
+        "requiredRunIncludes": [
+          "pnpm exec codapult-guard verify",
+          "--policy-base"
+        ],
+        "maxPermissions": {
+          "contents": "read",
+          "security-events": "write"
+        }
+      }
+    ]
+  }
 }
